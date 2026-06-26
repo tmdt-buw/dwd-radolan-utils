@@ -1,8 +1,6 @@
 # DWD RADOLAN Utils
 
 [![CI/CD Pipeline](https://github.com/yahah100/dwd-radolan-utils/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/yahah100/dwd-radolan-utils/actions)
-[![codecov](https://codecov.io/gh/yahah100/dwd-radolan-utils/branch/main/graph/badge.svg)](https://codecov.io/gh/yahah100/dwd-radolan-utils)
-[![PyPI version](https://badge.fury.io/py/dwd-radolan-utils.svg)](https://badge.fury.io/py/dwd-radolan-utils)
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3130/)
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
@@ -294,12 +292,3 @@ This project is licensed under the BSD 3-Clause License - see the LICENSE file f
 - The wradlib team for weather radar utilities
 - The pysheds team for watershed analysis tools
 
-## Citation
-
-If you use this package in research, please cite:
-
-```bibtex
-@software{dwd_radolan_utils,
-    TODO
-}
-```
