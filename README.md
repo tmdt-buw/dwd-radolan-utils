@@ -291,4 +291,3 @@ This project is licensed under the BSD 3-Clause License - see the LICENSE file f
 - German Weather Service (DWD) for providing RADOLAN data
 - The wradlib team for weather radar utilities
 - The pysheds team for watershed analysis tools
-
