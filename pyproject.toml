@@ -39,10 +39,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/dwd-radolan-utils"
-Repository = "https://github.com/yourusername/dwd-radolan-utils"
-Documentation = "https://github.com/yourusername/dwd-radolan-utils#readme"
-Issues = "https://github.com/yourusername/dwd-radolan-utils/issues"
+Homepage = "https://github.com/tmdt-buw/dwd-radolan-utils"
+Repository = "https://github.com/tmdt-buw/dwd-radolan-utils"
+Documentation = "https://github.com/tmdt-buw/dwd-radolan-utils#readme"
+Issues = "https://github.com/tmdt-buw/dwd-radolan-utils/issues"
 
 [build-system]
 requires = ["hatchling"]
