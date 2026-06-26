@@ -38,12 +38,6 @@ dependencies = [
     "pysheds @ git+https://github.com/yahah100/pysheds.git",
 ]
 
-
-
-[project.scripts]
-dwd-radolan-download = "dwd_radolan_utils.cli:download_cli"
-dwd-radolan-extract = "dwd_radolan_utils.cli:extract_cli"
-
 [project.urls]
 Homepage = "https://github.com/yourusername/dwd-radolan-utils"
 Repository = "https://github.com/yourusername/dwd-radolan-utils"
