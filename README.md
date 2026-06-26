@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/yahah100/dwd-radolan-utils/branch/main/graph/badge.svg)](https://codecov.io/gh/yahah100/dwd-radolan-utils)
 [![PyPI version](https://badge.fury.io/py/dwd-radolan-utils.svg)](https://badge.fury.io/py/dwd-radolan-utils)
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3130/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 Python utilities for downloading and processing DWD RADOLAN radar data. This package provides tools for working with German Weather Service (DWD) radar precipitation data, including downloading, processing, and extracting time series from radar grids.
 
@@ -286,7 +286,7 @@ refactor: refactor code
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the BSD 3-Clause License - see the LICENSE file for details.
 
 ## Acknowledgments
 
