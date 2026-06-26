@@ -97,6 +97,15 @@ dist_grid, grid = compute_catchement_for_location(
 )
 ```
 
+## Examples
+
+For a complete, step-by-step walkthrough, see the example notebooks in the
+[`examples/`](examples/) directory:
+
+- [`examples/create_timeseries.ipynb`](examples/create_timeseries.ipynb) — Download
+  historical RADOLAN data and extract a precipitation time series for a single location,
+  with explanations for each step.
+
 ## Development
 
 This project uses modern Python development tools and practices.
