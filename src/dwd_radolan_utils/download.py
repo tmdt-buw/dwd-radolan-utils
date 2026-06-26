@@ -38,7 +38,7 @@ def list_dwd_files_for_var(url: str):
         list: A list of DWD file names for the specified variable.
     """
     log.info(f"Download files from {url}")
-    page = requests.get(url)
+    page = requests.get(url, timeout=60)
     if page.status_code != 200:
         raise Exception(f"Failed to download files from {url}")
     soup = BeautifulSoup(page.content, "html.parser")
@@ -193,7 +193,7 @@ def dowload_file_and_save(
         return new_unpacked_file
 
     log.debug(f"Download file {file_name} from {url}")
-    response = requests.get(f"{url}{file_name}")
+    response = requests.get(f"{url}{file_name}", timeout=60)
     if response.status_code != 200:
         raise Exception(f"Failed to download file {file_name} from {url}")
     with open(new_file, "wb") as f:
@@ -202,7 +202,8 @@ def dowload_file_and_save(
     if suffix == ".tar.gz":
         log.debug(f"Unpacking tar.gz file {new_file} to {new_unpacked_file}")
         with tarfile.open(new_file, "r:gz") as tar:
-            tar.extractall(path=new_unpacked_file)
+            # filter="data" rejects unsafe members (path traversal, absolute paths, etc.)
+            tar.extractall(path=new_unpacked_file, filter="data")
         new_file.unlink()
         log.debug(f"Unpacked file {new_unpacked_file} saved")
         return new_unpacked_file
@@ -378,7 +379,8 @@ def download_one_month(
     type_radolan: TypeRadarData,
     save_path: Path = Path("data/dwd/"),
 ):
-    assert year is not None and month is not None, "Year and month must be provided"
+    if year is None or month is None:
+        raise ValueError("Year and month must be provided")
     start = datetime(year=year, month=month, day=1)
     end = add_one_month(start)
     if type_radolan == "now":

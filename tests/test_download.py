@@ -53,7 +53,7 @@ class TestListDwdFilesForVar:
 
         expected = ["file1.gz", "file2.bz2", "file3.tar.gz"]
         assert result == expected
-        mock_get.assert_called_once_with(url)
+        mock_get.assert_called_once_with(url, timeout=60)
 
     @patch("dwd_radolan_utils.download.requests.get")
     def test_list_dwd_files_failure(self, mock_get):
@@ -185,7 +185,7 @@ class TestDownloadFileAndSave:
         assert "radolan_recent" in str(result)
 
         # Verify request was made
-        mock_get.assert_called_once_with(f"{url}{filename}")
+        mock_get.assert_called_once_with(f"{url}{filename}", timeout=60)
         # Verify file operations were called
         mock_copyfileobj.assert_called_once()
         mock_unlink.assert_called_once()
@@ -384,7 +384,7 @@ class TestDownloadDwd:
     def test_download_dwd_invalid_params(self):
         """Test error handling for invalid parameters."""
         with pytest.raises(Exception, match="Invalid type_radolan"):
-            download_dwd("invalid", None, None)  # type: ignore
+            download_dwd("invalid", None, None)  # type: ignore[arg-type]
 
 
 class TestDownloadOneMonth:

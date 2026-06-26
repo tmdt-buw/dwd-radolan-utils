@@ -83,10 +83,10 @@ check_untyped_defs = false
 # Ignore specific error codes that are not critical
 disable_error_code = [
     "import-untyped",
-    "no-untyped-def", 
+    "no-untyped-def",
     "annotation-unchecked",
     "assignment",
-    "call-overload", 
+    "call-overload",
     "no-any-return"
 ]
 

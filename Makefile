@@ -66,4 +66,4 @@ all-checks: lint format-check type-check security test ## Run all quality checks
 
 ci: install all-checks ## Run CI pipeline locally
 
-.DEFAULT_GOAL := help 
+.DEFAULT_GOAL := help

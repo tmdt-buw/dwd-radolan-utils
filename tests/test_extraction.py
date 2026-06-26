@@ -171,7 +171,7 @@ class TestAggregateTs:
     def test_aggregate_ts_invalid_method(self, sample_grid, sample_radar_data):
         """Test error handling for invalid aggregation method."""
         with pytest.raises(ValueError, match="Method invalid not supported"):
-            aggregate_ts(sample_grid, sample_radar_data, method="invalid")  # type: ignore
+            aggregate_ts(sample_grid, sample_radar_data, method="invalid")  # type: ignore[arg-type]
 
     def test_aggregate_ts_boolean_grid(self, sample_boolean_grid, sample_radar_data):
         """Test aggregation with boolean grid input."""
@@ -304,5 +304,5 @@ class TestSaveTsArray:
                 ts_array=ts_array,
                 timestamps=sample_time_data,
                 path=save_path,
-                file_format="invalid",  # type: ignore
+                file_format="invalid",  # type: ignore[arg-type]
             )
